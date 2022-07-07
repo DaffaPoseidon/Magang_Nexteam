@@ -1,0 +1,16 @@
+{
+  "name": "minggu-satu-hari-ketiga",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build src/styles.css -o public/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.4"
+  }
+}
