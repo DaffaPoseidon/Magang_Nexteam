@@ -6,9 +6,9 @@
 		characterColor = 'white'
 	}
 
-	const handleInput = (e) => {
-		characterColor = e.target.value
-	}
+	// const handleInput = (e) => {
+	// 	characterColor = e.target.value
+	// }
 </script>
 
 <main>
@@ -46,10 +46,10 @@
 			max-width: none;
 		}
 	}
-	input{
+	/* input{
 		color: black;
 		font-size: 4rem;
 		border: black;
 		padding: 2em 5em;
-	}
+	} */
 </style>
