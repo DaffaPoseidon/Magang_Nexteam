@@ -6,9 +6,9 @@
 		characterColor = 'white'
 	}
 
-	// const handleInput = (e) => {
-	// 	characterColor = e.target.value
-	// }
+	const handleInput = (e) => {
+		characterColor = e.target.value
+	}
 </script>
 
 <main>
