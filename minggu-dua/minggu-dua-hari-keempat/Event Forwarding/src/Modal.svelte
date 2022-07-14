@@ -11,6 +11,7 @@
 {#if showModal}
 <!-- class:promo={isPromo} adalah jika variabel boolean isPromo adalah "true" maka akan menambahkan class "promo"
 ke dalam div -->
+<!-- Ditambahkan on:click sebagai Event Forward ke App.svelte -->
 <div class="backdrop" class:promo={isPromo} on:click>
     <div class="modal">
         <!-- Menggantikan hard-coded statis menjadi data dinamis yang diberikan melalui props di App.svelte -->
