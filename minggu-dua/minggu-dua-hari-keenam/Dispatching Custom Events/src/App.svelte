@@ -21,6 +21,14 @@
 		people = people.filter((person) => person.id != id)
 		console.log(e)
 	}
+
+	// komponen addPerson untuk menambahkan person ke dalam people
+	const addPerson = (e) => {
+		const person = e.detail
+		people = [person, ...people]
+		showModal = false
+	}
+
 	let num = 3
 </script>
 
@@ -34,7 +42,8 @@
 	 di luar class asalnya yakni di luar Modal.svelte sendiri dengan memasukkan function toggleModal -->
 <Modal isPromo={true} showModal={showModal} on:click={toggleModal}>
 	<!-- Keren juga, bisa masukin class dalam class -->
-	<AddPersonForm/>
+	<!-- on:addPerson adalah ketika kita mengklik maka akan menjalankan komponen addPerson -->
+	<AddPersonForm on:addPerson={addPerson}/>
 </Modal>
 
 <!-- Menerapkan kondisional berupa IF, IF-ELSE, dan ELSE dengan kondisi berupa angka  -->

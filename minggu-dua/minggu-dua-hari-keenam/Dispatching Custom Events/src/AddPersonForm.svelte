@@ -1,4 +1,10 @@
 <script>
+    // Fungsinya adalah untuk men-dispatch (mengerahkan) event yang kita modifikasi sendiri ke class parent
+    import {createEventDispatcher} from 'svelte'
+
+    // Memasukkan dispatch yang kita import ke dalam variabel yang nantinya bisa digunakan di class parent
+    let dispatch = createEventDispatcher()
+
     let name
     let characterColor
     let age
@@ -9,7 +15,14 @@
     let skills = []
 
     const handleSubmit = () => {
-        console.log(name, characterColor, age, skills)
+        const person = {
+            name,
+            characterColor,
+            age,
+            skills,
+            id: Math.random()
+        }
+        dispatch('addPerson', person)
     }
 </script>
 
