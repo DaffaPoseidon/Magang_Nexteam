@@ -12,6 +12,8 @@
     <!-- Tag h2 yang isinya adalah isi variabel title -->
     <h2>{title}</h2>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque et animi perspiciatis eveniet adipisci nihil ipsam magnam voluptates cum corporis odio magni vero rerum dolorem temporibus ratione dolores, illum harum, laborum iusto sed! Quo fugit adipisci minus harum, totam labore amet quos tenetur laudantium est mollitia quis dolore voluptates hic odio officia quaerat officiis obcaecati eaque recusandae iusto enim doloribus!</p>
+    <!-- Berlaku sama dengan index.svelte di folder guides, index.svelte di folder routes adalah class
+         "root"-nya folder routes, maka dari itu page-page lain dipusatkan di sini -->
     <a href="/guides">View guides</a>
     <a href="/about">About Us</a>
     <!-- Sebuah button yang jika diklik (on:click) maka akan menjalankan fungsi updateTitle -->
