@@ -9,11 +9,10 @@
     export async function load({fetch}){
         // karena function-nya tak sinkron maka perlu menunggu hingga sinkron dengan jalannya sistem, lantas
         // ditambahkan "await"
-        const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+        const res = await fetch('/guides.json')
         // variabel guides berisi variabel res yang sudah mengantongi data-data json-nya sehingga bisa digunakan
         // di manapun
-        const guides = await res.json()
-        console.log(guides)
+        const {guides} = await res.json()
 
         // Jika variabel res berjalan dengan baik maka program berlanjut
         if(res.ok){

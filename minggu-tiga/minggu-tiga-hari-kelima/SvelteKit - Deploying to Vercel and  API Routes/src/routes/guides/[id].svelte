@@ -7,9 +7,10 @@
         const id = params.id
         // karena function-nya tak sinkron maka perlu menunggu hingga sinkron dengan jalannya sistem, lantas
         // ditambahkan "await"
-        const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+        // const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+        const res = await fetch(`/guides/${id}.json`)
         // variabel guide berisi variabel res yang sudah mengantongi data-data json-nya sehingga bisa digunakan di manapun
-        const guide = await res.json()
+        const {guide} = await res.json()
         console.log(guide)
 
         // Jika variabel res berjalan dengan baik maka program berlanjut
