@@ -1,0 +1,11 @@
+/* Style global yang bisa ditempatkan di manapun dan  meng-override apa pun */
+
+body{
+    background: #422d5d;
+    margin: 0;
+}
+h1,h2,h3,h4,a,p,li{
+    color: #decff1;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+}
