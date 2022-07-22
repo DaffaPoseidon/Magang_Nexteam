@@ -2,12 +2,13 @@
 
 <script context="module">
     export async function load({fetch, params}){
+        // Memaksa kode untuk menunggu selama satu detik (1000 ms) sebelum melakukan fetching data
+        await new Promise(resolve => setTimeout(resolve, 1000))
         const id = params.id
         // karena function-nya tak sinkron maka perlu menunggu hingga sinkron dengan jalannya sistem, lantas
         // ditambahkan "await"
         const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
-        // variabel guide berisi variabel res yang sudah mengantongi data-data json-nya sehingga bisa digunakan
-        // di manapun
+        // variabel guide berisi variabel res yang sudah mengantongi data-data json-nya sehingga bisa digunakan di manapun
         const guide = await res.json()
         console.log(guide)
 

@@ -43,7 +43,11 @@
     <ul>
         {#each guides as guide}
             <li>
-                <a href={`/guides/${guide.id}`}>{guide.title}</a>
+                <!-- Agar kinerja web bisa seimbang dengan kecepatan PC dan lebih baik, terkadang kita 
+                     menggunakan sveltekit:prefetch, yakni ketika kita meng-hover (menggerakkan mouse ke elemen)
+                     maka svelte akan me-load halaman tersebut terlebih dahulu sehingga tidak lagi menunggu 
+                     1000 detik agar masuk ke web -->
+                <a sveltekit:prefetch href={`/guides/${guide.id}`}>{guide.title}</a>
             </li> 
         {/each}
     </ul>
