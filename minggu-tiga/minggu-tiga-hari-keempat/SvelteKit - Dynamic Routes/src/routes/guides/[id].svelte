@@ -1,8 +1,8 @@
 <!-- Bagian route yang berubah-ubah / parameter, nama class atau file-nya dibungkus [] -->
 
 <script context="module">
-    export async function load({fetch, page}){
-        const id = page.params.id
+    export async function load({fetch, params}){
+        const id = params.id
         // karena function-nya tak sinkron maka perlu menunggu hingga sinkron dengan jalannya sistem, lantas
         // ditambahkan "await"
         const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
